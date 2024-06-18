@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -66,4 +67,24 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // 1
+    implementation("com.google.firebase:firebase-auth:23.0.0")
+
+
+    implementation(platform("com.google.firebase:firebase-bom:32.8.0"))
+
+    implementation("com.google.firebase:firebase-database:21.0.0")
+
+    implementation("androidx.navigation:navigation-compose:2.5.3")
+
+    implementation("com.google.android.gms:play-services-auth:20.4.1")
+
+    implementation("io.coil-kt:coil-compose:2.2.2")
+
+    implementation("com.google.firebase:firebase-database-ktx:20.0.0")
+
+    implementation("io.coil-kt:coil-compose:1.4.0")
+
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.4.0")
 }
